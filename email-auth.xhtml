@@ -1,0 +1,895 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Email Authentication Parameters</title>
+  </head>
+  <body>
+    <h1>Email Authentication Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2009-01-30</dd>
+      <dt>Last Updated</dt>
+      <dd>2015-03-16</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="email-auth.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="email-auth.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="email-auth.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#email-auth-methods">Email Authentication Methods</a>
+      </li>
+      <li>
+        <a href="#email-auth-result-names">Email Authentication Result Names</a>
+      </li>
+      <li>
+        <a href="#property-types">Email Authentication Property Types</a>
+      </li>
+    </ul>
+    <h2><a name="email-auth-methods" id="email-auth-methods"></a>Email Authentication Methods</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Murray Kucherawy (primary), Dave Crocker (secondary), Scott Kitterman (secondary)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="email-auth-methods.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-email-auth-methods" class="sortable">
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Defined</th>
+          <th>ptype</th>
+          <th>Property</th>
+          <th>Value</th>
+          <th>Status</th>
+          <th>Version</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>auth</td>
+          <td>[<a href="http://www.iana.org/go/rfc4954">RFC4954</a>]</td>
+          <td>smtp</td>
+          <td>auth</td>
+          <td>AUTH parameter of the SMTP MAIL command</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>dkim</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>header</td>
+          <td>d</td>
+          <td>value of signature "d" tag</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>dkim</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>header</td>
+          <td>i</td>
+          <td>value of signature "i" tag</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>dkim</td>
+          <td>[<a href="http://www.iana.org/go/rfc6376">RFC6376</a>]</td>
+          <td>header</td>
+          <td>b</td>
+          <td>full or partial value of signature "b" tag 
+          [<a href="http://www.iana.org/go/rfc6008">RFC6008</a>]</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>dkim-adsp</td>
+          <td>[<a href="http://www.iana.org/go/rfc5617">RFC5617</a>]</td>
+          <td>header</td>
+          <td>from</td>
+          <td>contents of the [RFC5322] From: header field, with comments removed</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>dkim-atps</td>
+          <td>[<a href="http://www.iana.org/go/rfc6541">RFC6541</a>]</td>
+          <td>header</td>
+          <td>from</td>
+          <td>contents of the [RFC5322] From: header field, with comments removed</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>dmarc</td>
+          <td>[<a href="http://www.iana.org/go/draft-kucherawy-dmarc-base-12">RFC-kucherawy-dmarc-base-12</a>]</td>
+          <td>header</td>
+          <td>from</td>
+          <td>the domain portion of the RFC5322.From field</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>domainkeys</td>
+          <td>[<a href="http://www.iana.org/go/rfc4870">RFC4870</a>]</td>
+          <td>header</td>
+          <td>d</td>
+          <td>value of signature "d" tag</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>domainkeys</td>
+          <td>[<a href="http://www.iana.org/go/rfc4870">RFC4870</a>]</td>
+          <td>header</td>
+          <td>from</td>
+          <td>value of From header field after removing comments and local-part if 
+          not authenticated</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>domainkeys</td>
+          <td>[<a href="http://www.iana.org/go/rfc4870">RFC4870</a>]</td>
+          <td>header</td>
+          <td>sender</td>
+          <td>value of Sender header field after removing comments and local-part if 
+        not authenticated</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>iprev</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>policy</td>
+          <td>iprev</td>
+          <td>client IP address</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>rrvs</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>]</td>
+          <td>smtp</td>
+          <td>rcptto</td>
+          <td>envelope recipient</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>sender-id</td>
+          <td>[<a href="http://www.iana.org/go/rfc4406">RFC4406</a>]</td>
+          <td>header</td>
+          <td>name of header field used by PRA</td>
+          <td>value of header field used by PRA after removing comments and parts 
+        not authenticated</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>smime</td>
+          <td>[<a href="http://www.iana.org/go/rfc5751">RFC5751</a>]</td>
+          <td>body</td>
+          <td>smime-part</td>
+          <td>A reference to the MIME body part that contains the signature, as 
+      defined in Section 4.1 of [<a href="http://www.iana.org/go/rfc7281">RFC7281</a>].</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>smime</td>
+          <td>[<a href="http://www.iana.org/go/rfc5751">RFC5751</a>]</td>
+          <td>body</td>
+          <td>smime-identifer</td>
+          <td>The email address [<a href="http://www.iana.org/go/rfc5322">RFC5322</a>] associated with the 
+      S/MIME signature. The email address can be specified explicitly or derived 
+      from the identity of the signer. Note that this email address can correspond 
+      to a countersignature.</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>smime</td>
+          <td>[<a href="http://www.iana.org/go/rfc5751">RFC5751</a>]</td>
+          <td>body</td>
+          <td>smime-serial</td>
+          <td>serialNumber of the certificate associated with the S/MIME signature 
+      (see Section 4.1.2.2 of [<a href="http://www.iana.org/go/rfc5280">RFC5280</a>]).</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>smime</td>
+          <td>[<a href="http://www.iana.org/go/rfc5751">RFC5751</a>]</td>
+          <td>body</td>
+          <td>smime-issuer</td>
+          <td>Issuer name DN (e.g., "CN=CA1,ST=BC,c=CA") of the certificate 
+      associated with the S/MIME signature (see section 4.1.2.2 of  
+      [<a href="http://www.iana.org/go/rfc5280">RFC5280</a>]).</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>spf</td>
+          <td>[<a href="http://www.iana.org/go/rfc4408">RFC4408</a>]</td>
+          <td>smtp</td>
+          <td>mailfrom</td>
+          <td>envelope sender after removing parts not authenticated</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>spf</td>
+          <td>[<a href="http://www.iana.org/go/rfc4408">RFC4408</a>]</td>
+          <td>smtp</td>
+          <td>helo</td>
+          <td>HELO/EHLO value</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>vbr</td>
+          <td>[<a href="http://www.iana.org/go/rfc6212">RFC6212</a>]</td>
+          <td>header</td>
+          <td>md</td>
+          <td>DNS domain name used as the subject of a VBR query</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>vbr</td>
+          <td>[<a href="http://www.iana.org/go/rfc6212">RFC6212</a>]</td>
+          <td>header</td>
+          <td>mv</td>
+          <td>DNS domain name of the entity acting as the voucher</td>
+          <td>active</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="email-auth-result-names" id="email-auth-result-names"></a>Email Authentication Result Names</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Murray Kucherawy (primary), Dave Crocker (secondary), Scott Kitterman (secondary)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="email-auth-result-names.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-email-auth-result-names" class="sortable">
+      <thead>
+        <tr>
+          <th>Code</th>
+          <th>Defined</th>
+          <th>Auth Method(s)</th>
+          <th>Meaning</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>domainkeys</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>spf</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>sender-id</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>auth</td>
+          <td>section 2.6.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim-adsp</td>
+          <td>[<a href="http://www.iana.org/go/rfc5617">RFC5617</a>] section 5.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>vbr</td>
+          <td>[<a href="http://www.iana.org/go/rfc6212">RFC6212</a>] section 4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim-atps</td>
+          <td>[<a href="http://www.iana.org/go/rfc6541">RFC6541</a>] section 8.3</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>]</td>
+          <td>smime</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>] section 3.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>]</td>
+          <td>rrvs</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>] section 11</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>none</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dmarc</td>
+          <td>No DMARC policy record was published for the aligned 
+        identifier, or no aligned identifier could be extracted.</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>domainkeys</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>spf</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>sender-id</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>iprev</td>
+          <td>section 2.6.3</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>auth</td>
+          <td>section 2.6.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim-adsp</td>
+          <td>[<a href="http://www.iana.org/go/rfc5617">RFC5617</a>] section 5.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>vbr</td>
+          <td>[<a href="http://www.iana.org/go/rfc6212">RFC6212</a>] section 4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim-atps</td>
+          <td>[<a href="http://www.iana.org/go/rfc6541">RFC6541</a>] section 8.3</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>]</td>
+          <td>smime</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>] section 3.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>]</td>
+          <td>rrvs</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>] section 11</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>pass</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dmarc</td>
+          <td>A DMARC policy record was published for the aligned
+      identifier, and at least one of the authentication mechanisms
+      passed.</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>domainkeys</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>iprev</td>
+          <td>section 2.6.3</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>auth</td>
+          <td>section 2.6.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim-adsp</td>
+          <td>[<a href="http://www.iana.org/go/rfc5617">RFC5617</a>] section 5.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>vbr</td>
+          <td>[<a href="http://www.iana.org/go/rfc6212">RFC6212</a>] section 4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim-atps</td>
+          <td>[<a href="http://www.iana.org/go/rfc6541">RFC6541</a>] section 8.3</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>spf</td>
+          <td>[<a href="http://www.iana.org/go/rfc6577">RFC6577</a>] section 3</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>sender-id</td>
+          <td>[<a href="http://www.iana.org/go/rfc6577">RFC6577</a>] section 3</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>]</td>
+          <td>smime</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>] section 3.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>]</td>
+          <td>rrvs</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>] section 11</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>fail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dmarc</td>
+          <td>A DMARC policy record was published for the aligned
+      identifier, and none of the authentication mechanisms passed.</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>domainkeys</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>spf</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>sender-id</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>]</td>
+          <td>smime</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>] section 3.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>neutral</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>neutral</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>domainkeys</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>neutral</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>spf</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>neutral</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>sender-id</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>neutral</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>]</td>
+          <td>smime</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>] section 3.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>domainkeys</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>spf</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>sender-id</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>iprev</td>
+          <td>section 2.6.3</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>auth</td>
+          <td>section 2.6.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim-adsp</td>
+          <td>[<a href="http://www.iana.org/go/rfc5617">RFC5617</a>] section 5.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>vbr</td>
+          <td>[<a href="http://www.iana.org/go/rfc6212">RFC6212</a>] section 4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim-atps</td>
+          <td>[<a href="http://www.iana.org/go/rfc6541">RFC6541</a>] section 8.3</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>]</td>
+          <td>smime</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>] section 3.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>]</td>
+          <td>rrvs</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>] section 11</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>temperror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dmarc</td>
+          <td>A temporary error occurred during DMARC evaluation.  A
+      later attempt might produce a final result.</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>domainkeys</td>
+          <td>section 2.6.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>spf</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>sender-id</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>iprev</td>
+          <td>section 2.6.3</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>auth</td>
+          <td>section 2.6.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim-adsp</td>
+          <td>[<a href="http://www.iana.org/go/rfc5617">RFC5617</a>] section 5.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>vbr</td>
+          <td>[<a href="http://www.iana.org/go/rfc6212">RFC6212</a>] section 4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dkim-atps</td>
+          <td>[<a href="http://www.iana.org/go/rfc6541">RFC6541</a>] section 8.3</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>]</td>
+          <td>smime</td>
+          <td>[<a href="http://www.iana.org/go/rfc7281">RFC7281</a>] section 3.1</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>]</td>
+          <td>rrvs</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>] section 11</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>permerror</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>dmarc</td>
+          <td>A permanent error occurred during DMARC evaluation, such as
+      encountering a syntactically incorrect DMARC record.  A later
+      attempt is unlikely to produce a final result.</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>hardfail</td>
+          <td>[<a href="http://www.iana.org/go/rfc5451">RFC5451</a>]</td>
+          <td>spf</td>
+          <td>[<a href="http://www.iana.org/go/rfc5451">RFC5451</a>], [<a href="http://www.iana.org/go/rfc6577">RFC6577</a>] section 4.2</td>
+          <td>deprecated</td>
+        </tr>
+        <tr>
+          <td>hardfail</td>
+          <td>[<a href="http://www.iana.org/go/rfc5451">RFC5451</a>]</td>
+          <td>sender-id</td>
+          <td>[<a href="http://www.iana.org/go/rfc5451">RFC5451</a>], [<a href="http://www.iana.org/go/rfc6577">RFC6577</a>] section 4.2</td>
+          <td>deprecated</td>
+        </tr>
+        <tr>
+          <td>softfail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>spf</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>softfail</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001</a>]</td>
+          <td>sender-id</td>
+          <td>section 2.6.2</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>unknown</td>
+          <td>[<a href="http://www.iana.org/go/rfc5617">RFC5617</a>]</td>
+          <td>dkim-adsp</td>
+          <td>section 5.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>unknown</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>]</td>
+          <td>rrvs</td>
+          <td>[<a href="http://www.iana.org/go/rfc7293">RFC7293</a>] section 11</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>discard</td>
+          <td>[<a href="http://www.iana.org/go/rfc5617">RFC5617</a>]</td>
+          <td>dkim-adsp</td>
+          <td>section 5.4</td>
+          <td>active</td>
+        </tr>
+        <tr>
+          <td>nxdomain</td>
+          <td>[<a href="http://www.iana.org/go/rfc5617">RFC5617</a>]</td>
+          <td>dkim-adsp</td>
+          <td>section 5.4</td>
+          <td>active</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="property-types" id="property-types"></a>Email Authentication Property Types</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Murray Kucherawy (primary), Dave Crocker (secondary), Scott Kitterman (secondary)</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc7410">RFC7410</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="property-types.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-property-types" class="sortable">
+      <thead>
+        <tr>
+          <th>ptype</th>
+          <th>Definition</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>body</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001, section 2.2</a>]</td>
+          <td>The property being reported was found in the body of the message.</td>
+        </tr>
+        <tr>
+          <td>header</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001, section 2.2</a>]</td>
+          <td>The property being reported was found in a header field of the message.</td>
+        </tr>
+        <tr>
+          <td>policy</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001, section 2.3</a>]</td>
+          <td>The property being reported relates to a locally-defined policy.</td>
+        </tr>
+        <tr>
+          <td>smtp</td>
+          <td>[<a href="http://www.iana.org/go/rfc7001">RFC7001, section 2.2</a>]</td>
+          <td>The property being reported is a parameter to an SMTP command used to relay the message.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

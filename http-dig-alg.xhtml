@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Hypertext Transfer Protocol (HTTP) Digest Algorithm Values</title>
+  </head>
+  <body>
+    <h1>Hypertext Transfer Protocol (HTTP) Digest Algorithm Values</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2002-01-03</dd>
+      <dt>Last Updated</dt>
+      <dd>2012-11-06</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="http-dig-alg.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="http-dig-alg.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="http-dig-alg.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registry included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#http-dig-alg-1">HTTP Digest Algorithm Values</a>
+      </li>
+    </ul>
+    <h2><a name="http-dig-alg-1" id="http-dig-alg-1"></a>HTTP Digest Algorithm Values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>RFC Required or Specification Required</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>James Manger</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc3230">RFC3230</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="http-dig-alg-1.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-http-dig-alg-1" class="sortable">
+      <thead>
+        <tr>
+          <th>Digest Algorithm</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ADLER32</td>
+          <td>The ADLER32 algorithm is a checksum specified in RFC1950 "ZLIB
+Compressed Data Format". The 32-bit output is encoded in hexadecimal
+(using between 1 and 8 ASCII characters from 0-9, A-F, and a-f;
+leading 0's are allowed). For example, ADLER32=03da0195 and ADLER32=3DA0195
+are both valid checksums for the 4-byte message "Wiki".</td>
+          <td>[<a href="http://www.iana.org/go/rfc1950">RFC1950</a>][<a href="http://www.iana.org/go/rfc3309">RFC3309</a>][<a href="#Paul_Millar">Paul_Millar</a>]</td>
+        </tr>
+        <tr>
+          <td>MD5</td>
+          <td>The MD5 algorithm, as specified in [<a href="http://www.iana.org/go/rfc1321">RFC1321</a>].         
+The output of this algorithm is encoded using
+the base64 encoding [<a href="http://www.iana.org/go/rfc4648">RFC4648</a>].</td>
+          <td>[<a href="http://www.iana.org/go/rfc1321">RFC1321</a>][<a href="http://www.iana.org/go/rfc4648">RFC4648</a>][<a href="http://www.iana.org/go/rfc5843">RFC5843</a>]</td>
+        </tr>
+        <tr>
+          <td>SHA</td>
+          <td>The SHA-1 algorithm [<a href="http://csrc.nist.gov/publications/PubsFIPS.html">http://csrc.nist.gov/publications/PubsFIPS.html</a>][National Institute of Standards and Technology.
+Secure Hash Standard (SHS).  FEDERAL INFORMATION PROCESSING STANDARDS PUBLICATION 180-3, U.S. Department of
+Commerce, October 2008.].  The output of this algorithm is encoded using the base64 encoding [<a href="http://www.iana.org/go/rfc4648">RFC4648</a>].</td>
+          <td>[<a href="http://csrc.nist.gov/publications/PubsFIPS.html">http://csrc.nist.gov/publications/PubsFIPS.html</a>][National Institute of Standards and Technology.
+                Secure Hash Standard (SHS).  FEDERAL INFORMATION PROCESSING
+                STANDARDS PUBLICATION 180-3, U.S. Department of
+                Commerce, October 2008.][<a href="http://www.iana.org/go/rfc4648">RFC4648</a>][<a href="http://www.iana.org/go/rfc5843">RFC5843</a>]</td>
+        </tr>
+        <tr>
+          <td>SHA-256</td>
+          <td>The SHA-256 algorithm [<a href="http://csrc.nist.gov/publications/PubsFIPS.html">http://csrc.nist.gov/publications/PubsFIPS.html</a>][National Institute of Standards and Technology.
+                    Secure Hash Standard (SHS).  FEDERAL INFORMATION PROCESSING
+                    STANDARDS PUBLICATION 180-3, U.S. Department of
+                    Commerce, October 2008.].  The output           
+                    of this algorithm is encoded using the
+                    base64 encoding [<a href="http://www.iana.org/go/rfc4648">RFC4648</a>].</td>
+          <td>[<a href="http://csrc.nist.gov/publications/PubsFIPS.html">http://csrc.nist.gov/publications/PubsFIPS.html</a>][National Institute of Standards and Technology.
+                Secure Hash Standard (SHS).  FEDERAL INFORMATION PROCESSING
+                STANDARDS PUBLICATION 180-3, U.S. Department of
+                Commerce, October 2008.][<a href="http://www.iana.org/go/rfc4648">RFC4648</a>][<a href="http://www.iana.org/go/rfc5843">RFC5843</a>]</td>
+        </tr>
+        <tr>
+          <td>SHA-512</td>
+          <td>The SHA-512 algorithm [<a href="http://csrc.nist.gov/publications/PubsFIPS.html">http://csrc.nist.gov/publications/PubsFIPS.html</a>][National Institute of Standards and Technology.
+                    Secure Hash Standard (SHS).  FEDERAL INFORMATION PROCESSING
+                    STANDARDS PUBLICATION 180-3, U.S. Department of
+                    Commerce, October 2008.].  The output           
+                    of this algorithm is encoded using the
+                    base64 encoding [<a href="http://www.iana.org/go/rfc4648">RFC4648</a>].</td>
+          <td>[<a href="http://csrc.nist.gov/publications/PubsFIPS.html">http://csrc.nist.gov/publications/PubsFIPS.html</a>][National Institute of Standards and Technology.
+                    Secure Hash Standard (SHS).  FEDERAL INFORMATION PROCESSING
+                    STANDARDS PUBLICATION 180-3, U.S. Department of
+                    Commerce, October 2008.][<a href="http://www.iana.org/go/rfc4648">RFC4648</a>][<a href="http://www.iana.org/go/rfc5843">RFC5843</a>]</td>
+        </tr>
+        <tr>
+          <td>UNIXsum</td>
+          <td>The algorithm computed by the UNIX ``sum''            
+command, as defined by the Single UNIX
+Specification, Version 2 [The Open Group.  The Single UNIX Specification,
+Version 2 - 6 Vol Set for UNIX 98.  Document number T912,
+The Open Group, February 1997.].  The output
+of this algorithm is an ASCII decimal-digit
+string representing the 16-bit checksum,
+which is the first word of the output of the
+UNIX ``sum'' command.</td>
+          <td>[The Open Group.  The Single UNIX Specification,
+Version 2 - 6 Vol Set for UNIX 98.  Document number T912,
+The Open Group, February 1997.]</td>
+        </tr>
+        <tr>
+          <td>UNIXcksum</td>
+          <td>The algorithm computed by the UNIX ``cksum''          
+command, as defined by the Single UNIX
+Specification, Version 2 [The Open Group.  The Single UNIX Specification,
+Version 2 - 6 Vol Set for UNIX 98.  Document number T912,
+The Open Group, February 1997.].  The output
+of this algorithm is an ASCII digit string
+representing the 32-bit CRC, which is the
+first word of the output of the UNIX ``cksum''
+command.</td>
+          <td>[The Open Group.  The Single UNIX Specification,
+Version 2 - 6 Vol Set for UNIX 98.  Document number T912,
+The Open Group, February 1997.]</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="people">People</h1>
+    <table class="sortable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Contact URI</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a name="Paul_Millar" id="Paul_Millar">[Paul_Millar]</a>
+          </td>
+          <td>Paul Millar</td>
+          <td>
+            <a href="mailto:paul.millar&amp;desy.de">mailto:paul.millar&amp;desy.de</a>
+          </td>
+          <td>2012-11-06</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

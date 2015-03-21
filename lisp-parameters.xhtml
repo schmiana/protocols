@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Locator/ID Separation Protocol (LISP) Parameters</title>
+  </head>
+  <body>
+    <h1>Locator/ID Separation Protocol (LISP) Parameters</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2012-04-25</dd>
+      <dt>Last Updated</dt>
+      <dd>2013-02-01</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="lisp-parameters.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="lisp-parameters.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="lisp-parameters.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registries included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#lisp-act-value">LISP ACT values</a>
+      </li>
+      <li>
+        <a href="#lisp-address-type-codes-registry">LISP Address Type Codes</a>
+      </li>
+      <li>
+        <a href="#lisp-key-id-numbers">LISP Key ID Numbers</a>
+      </li>
+    </ul>
+    <h2><a name="lisp-act-value" id="lisp-act-value"></a>LISP ACT values</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>IETF Review or IESG Approval</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6830">RFC6830</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="lisp-act-value.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-lisp-act-value" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Action</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>No-Action</td>
+          <td>The map-cache is kept alive and no packet encapsulation occurs.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6830">RFC6830</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Natively-Forward</td>
+          <td>The packet is not encapsulated or dropped but natively forwarded.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6830">RFC6830</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Send-Map-Request</td>
+          <td>The packet invokes sending a Map-Request.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6830">RFC6830</a>]</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Drop</td>
+          <td>A packet that matches this map-cache entry is dropped. An ICMP Unreachable message SHOULD be sent.</td>
+          <td>[<a href="http://www.iana.org/go/rfc6830">RFC6830</a>]</td>
+        </tr>
+        <tr>
+          <td>4-7</td>
+          <td>Unassigned</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="lisp-address-type-codes-registry" id="lisp-address-type-codes-registry"></a>LISP Address Type Codes</h2>
+    <dl>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6830">RFC6830</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="lisp-address-type-codes-registry.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table class="sortable" id="table-lisp-address-type-codes-registry-range">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Registration Procedures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">0-127</td>
+          <td>IETF Review or IESG Approval</td>
+        </tr>
+        <tr>
+          <td align="center">128-255</td>
+          <td>First Come First Served</td>
+        </tr>
+      </tbody>
+    </table>
+    <table id="table-lisp-address-type-codes-registry" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0-255</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <h2><a name="lisp-key-id-numbers" id="lisp-key-id-numbers"></a>LISP Key ID Numbers</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>First Come First Served</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6830">RFC6830</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="lisp-key-id-numbers.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-lisp-key-id-numbers" class="sortable">
+      <thead>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>None</td>
+          <td>[<a href="http://www.iana.org/go/rfc6830">RFC6830</a>]</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>HMAC-SHA-1-96</td>
+          <td>[<a href="http://www.iana.org/go/rfc6830">RFC6830</a>]</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>HMAC-SHA-256-128</td>
+          <td>[<a href="http://www.iana.org/go/rfc6830">RFC6830</a>]</td>
+        </tr>
+        <tr>
+          <td>3-65535</td>
+          <td>Unassigned</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

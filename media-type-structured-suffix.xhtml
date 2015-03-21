@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:iana="http://www.iana.org/assignments">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <link rel="stylesheet" href="../_support/iana-registry.css" type="text/css" />
+    <script type="text/javascript" src="../_support/jquery.js"></script>
+    <script type="text/javascript" src="../_support/sort.js"></script>
+    <title>Structured Syntax Suffix Registry</title>
+  </head>
+  <body>
+    <h1>Structured Syntax Suffix Registry</h1>
+    <dl>
+      <dt>Created</dt>
+      <dd>2012-07-20</dd>
+      <dt>Last Updated</dt>
+      <dd>2014-07-08</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="media-type-structured-suffix.xml"><img src="/_img/icons/text-xml.png" /><br />XML</a>
+        <a class="altformat" href="media-type-structured-suffix.xhtml"><img src="/_img/icons/text-html.png" /><br />HTML</a>
+        <a class="altformat" href="media-type-structured-suffix.txt"><img src="/_img/icons/text-plain.png" /><br />Plain text</a>
+      </dd>
+    </dl>
+    <p>
+      <b>Registry included below</b>
+    </p>
+    <ul>
+      <li>
+        <a href="#structured-syntax-suffix">Structured Syntax Suffix Registry</a>
+      </li>
+    </ul>
+    <h2><a name="structured-syntax-suffix" id="structured-syntax-suffix"></a>Structured Syntax Suffix Registry</h2>
+    <dl>
+      <dt>Registration Procedure(s)</dt>
+      <dd>
+        <pre>Expert Review</pre>
+      </dd>
+      <dt>Expert(s)</dt>
+      <dd>
+        <pre>Ned Freed</pre>
+      </dd>
+      <dt>Reference</dt>
+      <dd>[<a href="http://www.iana.org/go/rfc6838">RFC6838</a>]</dd>
+      <dt>Available Formats</dt>
+      <dd>
+        <a class="altformat" href="structured-syntax-suffix.csv"><img src="/_img/icons/text-csv.png" /><br />CSV</a>
+      </dd>
+    </dl>
+    <table id="table-structured-syntax-suffix" class="sortable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>+suffix</th>
+          <th>References</th>
+          <th>Encoding Considerations</th>
+          <th>Interoperability Considerations</th>
+          <th>Fragment Identifier Considerations</th>
+          <th>Security Considerations</th>
+          <th>Contact</th>
+          <th>Author/Change Controller</th>
+          <th>Registration Date</th>
+          <th>Modification Date(s)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td align="center">Extensible Markup Language (XML)</td>
+          <td>+xml</td>
+          <td>[<a href="http://www.iana.org/go/rfc7303">RFC7303</a>]</td>
+          <td>Same as [<a href="http://www.iana.org/go/rfc7303">RFC7303</a>], Section 9.1.</td>
+          <td>Same as [<a href="http://www.iana.org/go/rfc7303">RFC7303</a>], Section 9.1. 
+      See above, and also Section 3, for guidelines on the use of the 'charset' parameter.</td>
+          <td>
+      <p>
+      Registrations which use this
+      '+xml' convention MUST also make reference to [<a href="http://www.iana.org/go/rfc7303">RFC7303</a>],
+      specifically Section 5, in specifying fragment identifier syntax
+      and semantics, and they MAY restrict the syntax to a specified
+      subset of schemes, except that they MUST NOT disallow barenames or
+      'element' scheme pointers.  They MAY further require support for
+      other registered schemes.  They also MAY add additional syntax
+      (which MUST NOT overlap with [<a href="http://www.w3.org/TR/2003/REC-xptr-framework-20030325/">XPointerFramework</a>] syntax) together
+      with associated semantics, and MAY add additional semantics for
+      barename XPointers which, as provided for in Section 5, will only
+      apply when [<a href="http://www.iana.org/go/rfc7303">RFC7303</a>] does not define an interpretation.
+      </p>
+      <p>
+      In practice these constraints imply that for a fragment
+      identifier addressed to an instance of a specific "xxx/yyy+xml"
+      type, there are three cases:
+      </p>
+      <p>
+      For fragment identifiers matching the syntax defined in
+      [<a href="http://www.w3.org/TR/2003/REC-xptr-framework-20030325/">XPointerFramework</a>], where the fragment identifier resolves
+      per the rules specified there, then process as specified
+      there;
+      </p>
+      <p>
+      For fragment identifiers matching the syntax defined in
+      [<a href="http://www.w3.org/TR/2003/REC-xptr-framework-20030325/">XPointerFramework</a>], where the fragment identifier does
+      _not_ resolve per the rules specified there, then process as
+      specified in "xxx/yyy+xml";
+      </p>
+      <p>
+      For fragment identifiers _not_ matching the syntax defined
+      in [<a href="http://www.w3.org/TR/2003/REC-xptr-framework-20030325/">XPointerFramework</a>], then process as specified in "xxx/
+      yyy+xml".  A fragment identifier of the form
+      "xywh=160,120,320,240", as defined in [<a href="http://www.w3.org/TR/2012/REC-media-frags-20120925/">MediaFrags</a>], which
+      might be used in a URI for an XML-encoded image, would fall
+      in this category.
+      </p>
+      </td>
+          <td>See Section 10, [<a href="http://www.iana.org/go/rfc7303">RFC7303</a>].</td>
+          <td>See Authors' Addresses section, [<a href="http://www.iana.org/go/rfc7303">RFC7303</a>].</td>
+          <td>The XML specification is a work product of the World Wide Web 
+      Consortium's XML Core Working Group. The W3C has change control over 
+      [<a href="http://www.iana.org/go/rfc7303">RFC7303</a>].</td>
+          <td>2012-11-15</td>
+          <td>2014-04-17</td>
+        </tr>
+        <tr>
+          <td align="center">JavaScript Object Notation (JSON)</td>
+          <td>+json</td>
+          <td>[<a href="http://www.iana.org/go/rfc4627">RFC4627</a>][<a href="http://www.iana.org/go/rfc6839">RFC6839</a>]</td>
+          <td>Per [<a href="http://www.iana.org/go/rfc4627">RFC4627</a>], JSON is allowed to be
+        represented using UTF-8, UTF-16, or UTF-32.  When
+        JSON is written in UTF-8, JSON is 8bit compatible ([<a href="http://www.iana.org/go/rfc2045">RFC2045</a>]).  When JSON is written in UTF-16 or
+        UTF-32, JSON is binary ([<a href="http://www.iana.org/go/rfc2045">RFC2045</a>]).</td>
+          <td>n/a</td>
+          <td>The syntax and semantics of fragment
+        identifiers specified for +json SHOULD be as
+        specified for "application/json".  (At
+        publication of this document, there is no
+        fragment identification syntax defined for
+        "application/json".)
+        
+        The syntax and semantics for fragment
+        identifiers for a specific "xxx/yyy+json"
+        SHOULD be processed as follows:
+        
+        For cases defined in +json, where the
+        fragment identifier resolves per the +json
+        rules, then as specified in +json.
+        
+        For cases defined in +json, where the
+        fragment identifier does not resolve per
+        the +json rules, then as specified in "xxx/
+        yyy+json".
+        
+        For cases not defined in +json, then as
+        specified in "xxx/yyy+json".</td>
+          <td>See [<a href="http://www.iana.org/go/rfc4627">RFC4627</a>].</td>
+          <td>Apps Area Working Group (apps-discuss@ietf.org)</td>
+          <td>The Apps Area Working Group.  IESG has
+        change control over this registration.</td>
+          <td>2012-11-27</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">Basic Encoding Rules (BER) message transfer syntax</td>
+          <td>+ber</td>
+          <td>[ITU.X690.2008][<a href="http://www.iana.org/go/rfc6839">RFC6839</a>]</td>
+          <td>BER is a binary encoding.</td>
+          <td>n/a</td>
+          <td>At publication of this document, there is no
+        fragment identification syntax defined for
+        +ber.
+        
+        The syntax and semantics for fragment
+        identifiers for a specific "xxx/yyy+ber"
+        SHOULD be processed as follows:
+        
+        For cases defined in +ber, where the
+        fragment identifier resolves per the +ber
+        rules, then as specified in +ber.
+      
+      For cases defined in +ber, where the
+      fragment identifier does not resolve per
+      the +ber rules, then as specified in "xxx/
+      yyy+ber".
+      
+      For cases not defined in +ber, then as
+      specified in "xxx/yyy+ber".
+      </td>
+          <td>Each individual media type registered with
+        a +ber suffix can have additional security
+        considerations.
+        
+        BER has a type-length-value structure, and it is
+        easy to construct malicious content with invalid
+        length fields that can cause buffer overrun
+        conditions.
+        
+        BER allows for arbitrary levels of nesting, which
+        may make it possible to construct malicious
+        content that will cause a stack overflow.
+        
+        Interpreters of the BER structures should be
+        aware of these issues and should take appropriate
+        measures to guard against buffer overflows and
+        stack overruns in particular and malicious
+        content in general.</td>
+          <td>Apps Area Working Group (apps-discuss@ietf.org)</td>
+          <td>The Apps Area Working Group.  IESG has
+        change control over this registration.</td>
+          <td>2012-11-27</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">Concise Binary Object Representation (CBOR)</td>
+          <td>+cbor</td>
+          <td>[<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]</td>
+          <td>CBOR is a binary format.</td>
+          <td>n/a</td>
+          <td>The syntax and semantics of fragment identifiers specified for
+     +cbor SHOULD be as specified for "application/cbor".  (At
+     publication of this document, there is no fragment identification
+     syntax defined for "application/cbor".)
+
+     The syntax and semantics for fragment identifiers for a specific
+     "xxx/yyy+cbor" SHOULD be processed as follows:
+
+     For cases defined in +cbor, where the fragment identifier resolves
+     per the +cbor rules, then process as specified in +cbor.
+
+     For cases defined in +cbor, where the fragment identifier does
+     not resolve per the +cbor rules, then process as specified in
+     "xxx/yyy+cbor".
+
+     For cases not defined in +cbor, then process as specified in
+     "xxx/yyy+cbor".
+      </td>
+          <td>See Section 8 of [<a href="http://www.iana.org/go/rfc7049">RFC7049</a>]
+      </td>
+          <td>Apps Area Working Group (apps-discuss at ietf.org)</td>
+          <td>The Apps Area Working Group.  IESG has
+        change control over this registration.</td>
+          <td>2013-09-19</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">Distinguished Encoding Rules (DER) message transfer syntax</td>
+          <td>+der</td>
+          <td>[ITU.X690.2008][<a href="http://www.iana.org/go/rfc6839">RFC6839</a>]</td>
+          <td>DER is a binary encoding.</td>
+          <td>n/a</td>
+          <td>At publication of this document, there is no
+        fragment identification syntax defined for
+        +der.
+        
+        The syntax and semantics for fragment
+        identifiers for a specific "xxx/yyy+der"
+        SHOULD be processed as follows:
+        
+        For cases defined in +der, where the
+        fragment identifier resolves per the +der
+        rules, then as specified in +der.
+        
+        For cases defined in +der, where the
+        fragment identifier does not resolve per
+        the +der rules, then as specified in "xxx/
+        yyy+der".
+        
+        For cases not defined in +der, then as
+        specified in "xxx/yyy+der".
+      </td>
+          <td>Each individual media type registered with
+        a +der suffix can have additional security
+        considerations.
+        
+        DER has a type-length-value structure, and it is
+        easy to construct malicious content with invalid
+        length fields that can cause buffer overrun
+        conditions.
+        
+        DER allows for arbitrary levels of nesting, which
+        may make it possible to construct malicious
+        content that will cause a stack overflow.
+      
+      Interpreters of the DER structures should be
+      aware of these issues and should take appropriate
+      measures to guard against buffer overflows and
+      stack overruns in particular and malicious
+      content in general.
+      </td>
+          <td>Apps Area Working Group (apps-discuss@ietf.org)</td>
+          <td>The Apps Area Working Group.  IESG has
+        change control over this registration.</td>
+          <td>2012-11-27</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">Fast Infoset document format</td>
+          <td>+fastinfoset</td>
+          <td>[ITU.X891.2005][<a href="http://www.iana.org/go/rfc6839">RFC6839</a>]</td>
+          <td>Fast Infoset is a binary encoding.  The
+        binary, quoted-printable and base64 content-
+        transfer-encodings are suitable for use with Fast
+        Infoset.</td>
+          <td>n/a</td>
+          <td>The syntax and semantics of fragment
+        identifiers specified for +fastinfoset SHOULD
+        be as specified for "application/fastinfoset".
+        (At publication of this document, there is no
+        fragment identification syntax defined for
+        "application/fastinfoset".)
+        
+        The syntax and semantics for fragment
+        identifiers for a specific "xxx/
+        yyy+fastinfoset" SHOULD be processed as
+        follows:
+        
+        For cases defined in +fastinfoset, where
+        the fragment identifier resolves per the
+        +fastinfoset rules, then as specified in
+        +fastinfoset.
+        
+        For cases defined in +fastinfoset, where
+        the fragment identifier does not resolve
+        per the +fastinfoset rules, then as
+        specified in "xxx/yyy+fastinfoset".
+        
+        For cases not defined in +fastinfoset, then
+        as specified in "xxx/yyy+fastinfoset".
+      </td>
+          <td>There are no security considerations
+        inherent in Fast Infoset.  Each individual media
+        type registered with a +fastinfoset suffix can
+        have additional security considerations.
+      </td>
+          <td>Apps Area Working Group (apps-discuss@ietf.org)</td>
+          <td>The Apps Area Working Group.  IESG has
+        change control over this registration.</td>
+          <td>2012-11-27</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">WAP Binary XML (WBXML) document format</td>
+          <td>+wbxml</td>
+          <td>[Open Mobile Alliance, "Binary XML Content Format
+        Specification", OMA Wireless Access Protocol WAP-192-
+        WBXML-20010725-a, July 2001.][<a href="http://www.iana.org/go/rfc6839">RFC6839</a>]</td>
+          <td>WBXML is a binary encoding.</td>
+          <td>n/a</td>
+          <td>The syntax and semantics of fragment
+        identifiers specified for +wbxml SHOULD be as
+        specified for "application/vnd.wap.wbxml".
+        (At publication of this document, there is no
+        fragment identification syntax defined for
+        "application/vnd.wap.wbxml".)
+        
+        The syntax and semantics for fragment
+        identifiers for a specific "xxx/yyy+wbxml"
+        SHOULD be processed as follows:
+        
+        For cases defined in +wbxml, where the
+        fragment identifier resolves per the +wbxml
+        rules, then as specified in +wbxml.
+        
+        For cases defined in +wbxml, where the
+        fragment identifier does not resolve per
+        the +wbxml rules, then as specified in
+        "xxx/yyy+wbxml".
+        
+        For cases not defined in +wbxml, then as
+        specified in "xxx/yyy+wbxml".
+      </td>
+          <td>There are no security considerations
+        inherent in WBXML.  Each individual media type
+        registered with a +wbxml suffix can have
+        additional security considerations.
+      </td>
+          <td>Apps Area Working Group (apps-discuss@ietf.org)</td>
+          <td>The Apps Area Working Group.  IESG has
+        change control over this registration.</td>
+          <td>2012-11-27</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center">ZIP file storage and transfer format</td>
+          <td>+zip</td>
+          <td>[PKWARE, Inc., "APPNOTE.TXT - .ZIP File Format
+        Specification", PKWARE .ZIP File Format Specification -
+        Version 6.3.2, September 2007.][<a href="http://www.iana.org/go/rfc6839">RFC6839</a>]</td>
+          <td>ZIP is a binary encoding.</td>
+          <td>n/a</td>
+          <td>The syntax and semantics of fragment
+        identifiers specified for +zip SHOULD be as
+        specified for "application/zip".  (At
+        publication of this document, there is no
+        fragment identification syntax defined for
+        "application/zip".)
+        
+        The syntax and semantics for fragment
+        identifiers for a specific "xxx/yyy+zip"
+        SHOULD be processed as follows:
+        
+        For cases defined in +zip, where the
+        fragment identifier resolves per the +zip
+        rules, then as specified in +zip.
+        
+        For cases defined in +zip, where the
+        fragment identifier does not resolve per
+        the +zip rules, then as specified in "xxx/
+        yyy+zip".
+        
+        For cases not defined in +zip, then as
+        specified in "xxx/yyy+zip".
+      </td>
+          <td>ZIP files support two forms of encryption:
+        Strong Encryption and AES 128-bit, 192-bit and
+        256-bit encryption; see the specification for
+        further details.  Each individual media type
+        registered with a +zip suffix can have additional
+        security considerations.
+      </td>
+          <td>Apps Area Working Group (apps-discuss@ietf.org)</td>
+          <td>The Apps Area Working Group.  IESG has
+        change control over this registration.</td>
+          <td>2012-11-27</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
